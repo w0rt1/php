@@ -3,9 +3,9 @@ return [
     'connections' => [
         'value' => [
             'default' => [
-                'host' => 'localhost',
-                'database' => '',
-                'login' => '',
+                'host' => 'MySQL-8.0',
+                'database' => 'phpmira',
+                'login' => 'root',
                 'password' => '',
             ]
         ]
@@ -13,18 +13,16 @@ return [
     'session' => [
         'value' => [
             'mode' => 'default',
-
         ],
         'readonly' => true
     ],
-    'cookie' =>[
+    'cookie' => [
         'value' => [
             'secure' => false,
             'http_only' => true,
         ],
         'readonly' => false,
     ],
-
     'cache_flags' => [
         'value' => [
             'config_options' => 3600,
