@@ -3,7 +3,7 @@
 namespace Core\Main;
 
 class Settings {
-    protected $arSettings;
+    private $arSettings;
 
     public function __construct()
     {
@@ -13,12 +13,12 @@ class Settings {
         //include, inlcude_once, require, require_once
     }
 
-    static public function getDbParams(string $dbname = 'default') : mixed
+    public function getDbParams(string $dbname = 'default') : mixed
     {
         return self::$arSettings['connections']['value'][$dbname] || false;
     }
 
-    static public function getSessionParams() : mixed
+    public function getSessionParams() : mixed
     {
         return self::$arSettings['session'] || [];
     }
