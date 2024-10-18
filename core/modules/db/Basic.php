@@ -95,8 +95,8 @@ class Basic
 
         //Применение лимитов и стратовой позиции выборки
         if (!empty($params['limit'])) {
-            $limit = $params['limit']['rows'] > 0 ? $params['limit']['rows'] : 100;
-            $offset = $params['limit']['offset'] > 0 ? $params['limit']['offset'] : 0;
+            $limit = (!empty($params['limit']['rows'])) > 0 ? $params['limit']['rows'] : 100;
+            $offset = (!empty($params['limit']['offset'])) > 0 ? $params['limit']['offset'] : 0;
 
             $sql .= ' LIMIT = ' . $limit;
             $sql .= ' OFFSET = ' . $offset;
